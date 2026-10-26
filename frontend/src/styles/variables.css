@@ -1,0 +1,38 @@
+:root {
+  /* VELoop Core Dark Palette */
+  --bg-primary: #0a0a14;
+  --bg-secondary: #120e24;
+  --bg-card: #18132f;
+  --bg-card-hover: #211a3f;
+  --bg-glass: rgba(24, 19, 47, 0.75);
+
+  /* Brand Accents */
+  --purple-primary: #8b5cf6;
+  --purple-glow: rgba(139, 92, 246, 0.35);
+  --purple-border: rgba(139, 92, 246, 0.25);
+  --purple-light: #c4b5fd;
+
+  /* Reward Gold / Amber Highlights */
+  --gold-primary: #fbbf24;
+  --gold-glow: rgba(251, 191, 36, 0.4);
+  --gold-gradient: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
+  --gold-border: rgba(251, 191, 36, 0.3);
+
+  /* Status Colors */
+  --green-success: #10b981;
+  --green-glow: rgba(16, 185, 129, 0.35);
+  --red-error: #ef4444;
+  --muted-text: #94a3b8;
+  --light-text: #f8fafc;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Radius & Transitions */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
