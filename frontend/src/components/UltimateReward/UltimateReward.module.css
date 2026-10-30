@@ -1,0 +1,137 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: 0 16px;
+}
+
+.ultimateCard {
+  background: radial-gradient(circle at 80% 50%, rgba(251, 191, 36, 0.15) 0%, rgba(24, 19, 47, 0.95) 70%);
+  border: 2px solid var(--gold-border);
+  border-radius: var(--radius-xl);
+  padding: 26px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(251, 191, 36, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.ultimateCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6), 0 0 45px rgba(251, 191, 36, 0.35);
+  border-color: var(--gold-primary);
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+.tagRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag {
+  background: var(--gold-gradient);
+  color: #0a0a14;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lockBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--muted-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.unlockedBadge {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: var(--green-border);
+  color: var(--green-success);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.amountHighlight {
+  color: var(--gold-primary);
+}
+
+.description {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.45;
+}
+
+.rightIllustration {
+  flex: 0 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.crownImg {
+  max-width: 130px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 25px rgba(251, 191, 36, 0.45));
+  animation: floatCrown 4s infinite ease-in-out;
+}
+
+@keyframes floatCrown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ultimateCard {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 22px 20px;
+  }
+  .leftContent {
+    align-items: center;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .rightIllustration {
+    flex: 0 0 auto;
+  }
+  .crownImg {
+    max-width: 100px;
+  }
+}

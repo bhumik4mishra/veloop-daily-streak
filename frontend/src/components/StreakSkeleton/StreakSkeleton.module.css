@@ -1,0 +1,77 @@
+.skeletonWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(24, 19, 47, 0.6) 0%,
+    rgba(139, 92, 246, 0.15) 50%,
+    rgba(24, 19, 47, 0.6) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerAnim 1.8s infinite linear;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.heroSkeleton {
+  height: 180px;
+  border-radius: var(--radius-xl);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.statSkeleton {
+  height: 90px;
+}
+
+.ultimateSkeleton {
+  height: 140px;
+  border-radius: var(--radius-xl);
+  border-color: rgba(251, 191, 36, 0.2);
+}
+
+.gridSkeleton {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gridSkeletonRow2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cardSkeleton {
+  height: 220px;
+}
+
+@keyframes shimmerAnim {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+  .gridSkeleton, .gridSkeletonRow2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -3,6 +3,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import { errorHandler } from './middleware/errorHandler.js';
 import authRoutes from './routes/auth.routes.js';
+import streakRoutes from './routes/streak.routes.js';
+import { getWallet } from './controllers/streak.controller.js';
+import { authenticateUser } from './middleware/auth.middleware.js';
 
 const app = express();
 
@@ -34,6 +37,12 @@ app.get('/api/health', (req, res) => {
 
 // Authentication routes (Phase 3)
 app.use('/api/auth', authRoutes);
+
+// Daily Streak routes (Phase 4)
+app.use('/api/daily-streak', streakRoutes);
+
+// Wallet endpoint (Phase 4)
+app.get('/api/wallet', authenticateUser, getWallet);
 
 // 404 Handler for undefined routes
 app.use((req, res) => {

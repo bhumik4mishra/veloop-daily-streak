@@ -1,0 +1,149 @@
+.statsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  padding: 0 16px;
+}
+
+.topPillRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.streakPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-primary);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+.calendarPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid var(--purple-border);
+  color: var(--purple-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.calendarPill:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: var(--purple-primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  background: rgba(24, 19, 47, 0.75);
+  border: 1px solid var(--purple-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--purple-border-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.totalIcon {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--purple-light);
+  border: 1px solid var(--purple-border);
+}
+
+.checkedIcon {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--green-success);
+  border: 1px solid var(--green-border);
+}
+
+.nextIcon {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-border);
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .statCard {
+    padding: 16px 18px;
+  }
+  .statValue {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topPillRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .streakPill, .calendarPill {
+    justify-content: center;
+  }
+}

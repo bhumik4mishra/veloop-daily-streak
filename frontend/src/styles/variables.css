@@ -4,35 +4,55 @@
   --bg-secondary: #120e24;
   --bg-card: #18132f;
   --bg-card-hover: #211a3f;
+  --bg-card-active: #281e4d;
   --bg-glass: rgba(24, 19, 47, 0.75);
+  --bg-glass-strong: rgba(24, 19, 47, 0.9);
 
   /* Brand Accents */
   --purple-primary: #8b5cf6;
+  --purple-secondary: #7c3aed;
   --purple-glow: rgba(139, 92, 246, 0.35);
   --purple-border: rgba(139, 92, 246, 0.25);
+  --purple-border-light: rgba(139, 92, 246, 0.4);
   --purple-light: #c4b5fd;
 
   /* Reward Gold / Amber Highlights */
   --gold-primary: #fbbf24;
+  --gold-secondary: #f59e0b;
   --gold-glow: rgba(251, 191, 36, 0.4);
+  --gold-glow-strong: rgba(251, 191, 36, 0.6);
   --gold-gradient: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
-  --gold-border: rgba(251, 191, 36, 0.3);
+  --gold-border: rgba(251, 191, 36, 0.35);
 
   /* Status Colors */
   --green-success: #10b981;
   --green-glow: rgba(16, 185, 129, 0.35);
+  --green-border: rgba(16, 185, 129, 0.4);
   --red-error: #ef4444;
+  --red-glow: rgba(239, 68, 68, 0.35);
   --muted-text: #94a3b8;
+  --muted-text-dark: #64748b;
   --light-text: #f8fafc;
+  --white: #ffffff;
 
   /* Typography */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
 
   /* Radius & Transitions */
+  --radius-xs: 6px;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-full: 9999px;
+  --transition-fast: all 0.15s ease;
   --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Shadows */
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(139, 92, 246, 0.25);
+  --shadow-gold: 0 8px 25px rgba(245, 158, 11, 0.35);
+  --shadow-green: 0 8px 25px rgba(16, 185, 129, 0.35);
 }

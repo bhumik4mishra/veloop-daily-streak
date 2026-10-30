@@ -1,0 +1,143 @@
+.heroContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 28px;
+  padding: 0 16px;
+}
+
+.heroCard {
+  background: linear-gradient(135deg, rgba(30, 22, 60, 0.8) 0%, rgba(18, 14, 36, 0.9) 100%);
+  border: 1px solid var(--purple-border-light);
+  border-radius: var(--radius-xl);
+  padding: 28px 36px;
+  box-shadow: var(--shadow-card), 0 0 40px rgba(139, 92, 246, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.heroCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 30%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.leftIllustration {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.heroImg {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  transition: transform 0.4s ease;
+}
+
+.heroImg:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.centerContent {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  padding: 0 10px;
+}
+
+.badgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid var(--purple-border-light);
+  color: var(--purple-light);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.goldHighlight {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.subtitle {
+  color: var(--muted-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 460px;
+}
+
+.rightIllustration {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .headline {
+    font-size: 1.8rem;
+  }
+  .leftIllustration, .rightIllustration {
+    flex: 0 0 120px;
+  }
+  .heroImg {
+    max-width: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroCard {
+    padding: 24px 20px;
+  }
+  .headline {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .leftIllustration, .rightIllustration {
+    display: none; /* Clean presentation on mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 1.35rem;
+  }
+}
